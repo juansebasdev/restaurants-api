@@ -65,6 +65,9 @@ export class AuthService {
       return { token };
     } catch (error) {
       console.error(error);
+      if (error.response) {
+        throw new HttpException(error.response, error.status);
+      }
       throw new HttpException(
         'Something went wrong',
         HttpStatus.INTERNAL_SERVER_ERROR,

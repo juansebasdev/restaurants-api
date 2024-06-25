@@ -21,7 +21,7 @@ class User {
   @CreateDateColumn({ type: 'timestamp' })
   createdAt: string;
 
-  @OneToMany(() => Historic, (historic) => historic.user)
+  @OneToMany(() => Historic, (historic) => historic.user, { nullable: true })
   historics: Historic[];
 }
 
