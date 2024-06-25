@@ -15,6 +15,7 @@ class MockHistoricRepository {
 
   save(historic) {
     this.historics.push(historic);
+    return historic;
   }
 }
 

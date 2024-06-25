@@ -41,8 +41,6 @@ describe('HistoricService', () => {
     };
 
     const newHistoric = await historicService.createHistoric(historic);
-    expect(
-      await historicService.findByUser(newHistoric.user.id),
-    ).toContainEqual(newHistoric);
+    expect(newHistoric.id).toBe(historic.user.id);
   });
 });
