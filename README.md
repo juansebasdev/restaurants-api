@@ -82,6 +82,10 @@ $ yarn run test:e2e
 $ yarn run test:cov
 ```
 
+## Documentation
+
+For testing purposes, you can use a Postman collection to test endpoints. It is published online [here](https://documenter.getpostman.com/view/16153868/2sA3drGZX4).
+
 ## Stay in touch
 
 - Author - [Juan Sebastian Bravo Meneses](https://github.com/juansebasdev)
