@@ -37,6 +37,25 @@ $ docker compose up -d --build
 $ yarn install
 ```
 
+#### Migrations
+
+##### Generate
+> [!NOTE]
+> Define `npm_config_name` env variable as the name for the migration
+> Ex export npm_config_name = AddMockTable
+
+And execute
+
+```bash
+$ yarn run migration:generate
+```
+
+##### Run
+
+```bash
+$ yarn run migration:run
+```
+
 #### Running the app
 
 ```bash
