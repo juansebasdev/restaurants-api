@@ -18,7 +18,7 @@ export class JWTStrategy extends PassportStrategy(Strategy) {
 
   async validate(payload: any) {
     const { id } = payload;
-    const user = await this.userRepository.findOne(id);
+    const user = await this.userRepository.findOne({ where: { id } });
     if (!user) {
       throw new UnauthorizedException('Login first to access this resource');
     }
